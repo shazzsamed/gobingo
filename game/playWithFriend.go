@@ -7,15 +7,13 @@ import (
 	"gobingo/models"
 	"log"
 	"net/url"
-	"os"
 	"strconv"
 
 	"github.com/fatih/color"
 	"github.com/gorilla/websocket"
-	"github.com/joho/godotenv"
 )
 
-
+var WssURL string 
 type ServerMessage struct {
 	Event string      `json:"event"`
 	Data  json.RawMessage `json:"data"`
@@ -53,19 +51,9 @@ func PlayWithFriend() {
 
 func createRoom(name string) string {
 	var err error
-	err = godotenv.Load()
-	if err != nil {
-		log.Fatal("Error loading .env file")
-	}
-
-	wssURL := os.Getenv("WSS_URL")
-	if wssURL == "" {
-		log.Fatal("WSS_URL not set in .env file")
-	}
-
 	u := url.URL{
 		Scheme: "wss",
-		Host: wssURL,
+		Host: WssURL,
 		Path: "/create-room", 
 		RawQuery: "name=" + name,
 	}
@@ -85,15 +73,6 @@ func createRoom(name string) string {
 
 func joinRoom(name string) {
 	var err error
-	err = godotenv.Load()
-	if err != nil {
-		log.Fatal("Error loading .env file")
-	}
-
-	wssURL := os.Getenv("WSS_URL")
-	if wssURL == "" {
-		log.Fatal("WSS_URL not set in .env file")
-	}
 
 	fmt.Print("Enter Room Code: ")
 	var joinCode string
@@ -101,7 +80,7 @@ func joinRoom(name string) {
 
 	u := url.URL{
 		Scheme: "wss",
-		Host: wssURL,
+		Host: WssURL,
 		Path: "/join-room",
 		RawQuery: "roomCode=" + joinCode + "&name=" + name,
 	}
