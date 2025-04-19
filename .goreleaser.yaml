@@ -23,7 +23,7 @@ builds:
       - windows
       - darwin
     ldflags:
-      - "X github.com/shazzsamed/gobingo/game.WssURL=${ .Env.WSS_URL}"
+      - "X game.WssURL=${ .Env.WSS_URL}"
 
 archives:
   - formats: [tar.gz]
