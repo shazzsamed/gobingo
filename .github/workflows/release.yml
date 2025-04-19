@@ -27,6 +27,12 @@ jobs:
           go-version: stable
       # More assembly might be required: Docker logins, GPG, etc.
       # It all depends on your needs.
+      - name: Echo WSS_URL value for debugging
+        run: echo "WSS_URL = ${{ secrets.WSS_URL }}"
+
+      - name: Echo ldflags
+        run: echo 'ldflags: -X github.com/shazzsamed/gobingo/game.WssURL=${{ secrets.WSS_URL }}'
+        
       - name: Run GoReleaser
         uses: goreleaser/goreleaser-action@v6
         with:
