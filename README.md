@@ -1,3 +1,5 @@
+<img src="https://github.com/user-attachments/assets/65e77308-1378-45c2-b19d-4ecda66d0523" width="1000" height="400">
+
 # 🎱 Go Bingo Game
 
 A fun and simple command-line Bingo game implemented in Go (Golang)! Play against the computer and see who gets Bingo first.
