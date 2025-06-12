@@ -41,7 +41,11 @@ Follow the on-screen instructions to play.
 
 #### **Option B**
 
-Dowlnoad releases.
+Dowlnoad from the releases.
+
+Extract the zip file
+
+Open the terminal where the .exe file is and type in ```.\gobingo.exe play``` to play
 
 ## 🧠 Game Rules
 * Each player gets a 5x5 Bingo board with random numbers.
