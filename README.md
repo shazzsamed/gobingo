@@ -53,3 +53,5 @@ Dowlnoad releases.
 * A line is counted when all numbers of either a row or a column or top diagonal is marked.
 
 * The first to complete 5 lines wins.
+
+Feedback @ shazzsamed@gmail.com
