@@ -59,3 +59,5 @@ Open the terminal where the .exe file is and type in ```.\gobingo.exe play``` to
 * The first to complete 5 lines wins.
 
 Feedback @ shazzsamed@gmail.com
+
+Checkout the blog for more: <a href='https://medium.com/@shazzsamed/personal-project-go-bingo-classic-bingo-game-using-golang-e5f9ce84ffa4'> Medium </a>
